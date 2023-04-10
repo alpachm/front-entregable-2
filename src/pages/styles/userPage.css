@@ -1,0 +1,187 @@
+.userPage{
+    width: 100%;
+    min-height: 100vh;
+
+    background: linear-gradient(400deg, var(--blue) 0 50%, var(--white) 50% 100%);
+}
+
+.userPage header{
+    width: 100%;
+    height: 70px;
+    padding: 0 1rem;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.userPage header button{
+    padding: .5rem 1rem;
+    border:none;
+    background:var(--red);
+    color:var(--white);
+    font-size: 1.1rem;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.container-userPage{
+    width: 90%;
+    max-width: 600px;
+    margin: auto;
+}
+
+.container-userPage h1{
+    font-weight: 400;
+    text-align: left;
+    margin-top: 1rem;
+}
+
+.container-userPage h1 span{
+    font-weight: 800;
+    color:var(--orange);
+}
+
+.box-amount{
+    width: 100%;
+    height: 40vh;
+    margin-top: 7rem;
+    background-color: var(--orange);
+    padding: 1rem;
+
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    gap:1rem;
+}
+
+.box-amount .top-box{
+    display: grid;
+    gap:.5rem;
+}
+
+.box-amount p{
+    font-size: 2rem;
+    color:var(--black);
+}
+
+.box-amount  p span{
+    font-weight: 600;
+    color:var(--white);
+}
+
+.box-amount > p::after{
+    content: '$';
+}
+
+.btn-transfer{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.btn-transfer button{
+    border: none;
+    background: var(--green);
+    padding: 1rem 0;
+    text-align: center;
+    font-weight: 600;
+    color:var(--white);
+    text-transform: uppercase;
+}
+
+.btn-transfer button:nth-child(1){
+    background: var(--dark-blue);
+}
+
+.btn-transfer button:nth-child(2){
+    background: var(--red);
+}
+
+.box-transfer{    
+position: fixed;
+top: 0;
+right: 0;
+bottom: 0;
+left: 0;
+z-index: 2000;
+
+width: 100%;
+height: 100vh;
+
+display: flex;
+justify-content: center;
+align-items: center;
+
+backdrop-filter: brightness(50%);
+transform: scale(0);
+
+transition: backdrop-filter 0;
+}
+
+.active-transfer{
+    transform: scale(1);
+}
+
+.box-transfer form{
+    display: grid;
+    gap:1rem;
+    position: relative;
+    transform: scale(0);
+
+    width: 60%;
+    margin:auto;
+    padding: 4rem 2rem;
+
+    background-color: var(--white);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.18);
+
+    transition: transform 300ms;
+}
+
+.box-transfer .active{
+    transform: scale(1);
+}
+
+.box-transfer form i{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+
+    font-size: 2rem;
+    color:var(--red);
+    cursor: pointer;
+}
+
+.box-transfer form div{
+    display: grid;
+    gap:5px;
+}
+
+.box-transfer form div label{
+    font-weight: 600;
+}
+
+.box-transfer form div input{
+    height: 30px;
+    padding: 0 .5rem;
+}
+
+.box-transfer form button{
+    height: 30px;
+    border: none;
+    background-color: var(--green);
+    font-weight: 600;
+    color:var(--white);
+}
+
+.messageError{
+    text-align: center;
+    color:var(--red);
+    transform: scaleY(0);
+    transition: transform 200ms;
+}
+
+.messageError .active{
+    transform: scaleY(1);
+}

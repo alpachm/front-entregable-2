@@ -1,0 +1,108 @@
+.loginPage{
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(90deg, var(--bg-blue) 0 100%) ,url(../../assets/slider/slider-1.png);
+    background-size: cover;
+    background-position-x: 600px;
+
+    position: relative;
+}
+
+.slider{
+    display: none;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+
+    width: 100%;
+    height: 100vh;
+}
+
+.sliderMovement{
+    width: 300%;
+    display: flex;
+}
+
+.img-container{
+    width: 100%;
+    height: 100%;
+}
+
+.loginPage form{
+    width: 80%;
+    max-width: 500px;
+    margin:auto;
+
+    display: grid;
+    gap:1rem;
+
+    position: relative;
+    z-index: 2000;
+}
+
+.loginPage form h2{
+    text-align: center;
+    color:var(--white);
+    font-weight: 400;
+
+    margin-bottom: 2rem;
+}
+
+.loginPage form h2 span{
+    color: var(--orange);
+    font-weight: 800;
+}
+
+.loginPage form div{
+    display: grid;
+    gap:10px;
+}
+
+.loginPage form label{
+    color:var(--white);
+}
+
+.loginPage form div input{
+    height: 40px;
+    padding: 0 .5rem ;
+}
+
+.loginPage form button{
+    border:none;
+    height: 40px;
+    width: 100%;
+    background-color: var(--dark-blue);
+    color:var(--white);
+    font-weight: 400;
+}
+
+.loginPage form .error{
+    text-align: center;
+    color:var(--dark-red);
+    font-weight: 600;
+    transform: scaleY(0);
+
+    transition: transform 200ms;
+}
+
+.loginPage form .hasError{
+    transform: scaleY(1);
+}
+
+.loginPage form a{
+    text-decoration: none;
+    text-align: center;
+    color:var(--orange);
+}
+
+@media(min-width:599px){
+    .loginPage{
+        background-position: center;
+    }
+}
